@@ -2,11 +2,11 @@
 
 # This class create for work with file
 class One
-  def self.part_one(str_my)
+  def part_one(str_my)
     word_array = []
     File.open('text.txt', 'w') { |f| f.print(str_my) }
     File.open('text.txt') do |f|
-      f.each { |s| s.split.select { |str_elem| str_elem.length == 2 }.each { |i| word_array << i  } }
+      f.each { |s| s.split.select { |str_elem| str_elem.length == 2 }.each { |i| word_array << i } }
     end
     word_array
   end
@@ -16,8 +16,13 @@ end
 class Triangle
   attr_reader :x1, :x2, :x3, :y1, :y2, :y3, :line_one, :line_two, :line_three
 
-  def initialize(x1, y1, x2, y2, x3, y3)
-    @x1, @y1, @x2, @y2, @x3, @y3 = x1, y1, x2, y2, x3, y3
+  def initialize(x_one, y_one, x_two, y_two, x_three, y_three)
+    @x1 = x_one
+    @y1 = y_one
+    @x2 = x_two
+    @y2 = y_two
+    @x3 = x_three
+    @y3 = y_three
     long_line
   end
 
@@ -37,9 +42,9 @@ end
 class TrianglePrism < Triangle
   attr_reader :x1, :x2, :x3, :y1, :y2, :y3, :line_one, :line_two, :line_three, :h
 
-  def initialize(x1, y1, x2, y2, x3, y3, h)
-    super(x1, y1, x2, y2, x3, y3)
-    @hi = h
+  def initialize(x_one, y_one, x_two, y_two, x_three, y_three, h_one)
+    super(x_one, y_one, x_two, y_two, x_three, y_three)
+    @hi = h_one
     long_line
   end
 

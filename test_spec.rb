@@ -2,18 +2,18 @@
 
 gem 'rspec'
 gem 'rspec-core'
-require_relative 'LaboratoryThree'
+require_relative 'laboratory_three'
 
-RSpec.describe Triangle  do
+RSpec.describe Triangle do
   describe 'initialize' do
     it 'check class Triangle' do
-      A = Triangle.new(0, 0, 6, 0, 3, 4)
-      expect(A.class).to eq(Triangle)
+      triangle = Triangle.new(0, 0, 6, 0, 3, 4)
+      expect(triangle.class).to eq(Triangle)
     end
 
     it 'Check class TrianglePrism' do
-      B = TrianglePrism.new(0, 0, 6, 0, 3, 4, 1)
-      expect(B.class).to eq(TrianglePrism)
+      traingle_prism = TrianglePrism.new(0, 0, 6, 0, 3, 4, 1)
+      expect(traingle_prism.class).to eq(TrianglePrism)
     end
 
     it 'The Triangle class is the parent of the triangle prism class' do
